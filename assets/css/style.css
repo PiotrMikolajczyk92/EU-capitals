@@ -23,3 +23,28 @@ footer {
     font-size: 8px;
     margin: 30px;
 }
+
+/* quiz area */
+
+.window {
+    background: white;
+    width: 75%;
+    max-width: 750px;
+    margin: auto;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.window h1 {
+    font-size: 20px;
+    border-bottom: 2px solid #4AC7C7;
+    padding-bottom: 5px;
+}
+
+.quiz {
+    padding: 10px;
+}
+
+.quiz h2 {
+    font-size: 18px;
+}
