@@ -48,3 +48,33 @@ footer {
 .quiz h2 {
     font-size: 18px;
 }
+
+/* buttons */
+
+.buttons {
+    background: white;
+    text-align: left;
+    font-size: 18px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #4AC7C7;
+    border-radius: 7px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.buttons:hover {
+    background: grey;
+    color: white;
+}
+
+#next-button {
+    background: #4AC7C7;
+    font-size: 18px;
+    width: 100px;
+    padding: 10px 15px;
+    margin: 10px auto 0;
+    border-radius: 7px;
+    cursor: pointer;
+    display: none;
+}
