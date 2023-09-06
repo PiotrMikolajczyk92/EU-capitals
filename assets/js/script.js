@@ -138,7 +138,7 @@ const questions = [
     }
 ];
 
-let currentQuestionIndex;
+let currentQuestionIndex = 0;
 const answerButtons = document.getElementById("answer-buttons");
 const questionElement = document.getElementById("question");
 
@@ -158,10 +158,17 @@ function displayQuestion() {
 
     // display answers for current question using forEach array method
     currentQuestion.answers.forEach(answers => {
-        let button = document.createElement("button");
+        const button = document.createElement("button");
         button.innerHTML = answers.text;
         button.classList.add("buttons");
         answerButtons.appendChild(button);
+        
+        // returns true or false from dataset correct
+        if(answers.correct) {
+            button.dataset.correct = answers.correct;
+        }
+        // add event listener for button clicks
+        button.addEventListener("click", checkAnswer);
     });
 }
 
@@ -172,11 +179,23 @@ function hidePreviousQuestion() {
     }
 }
 
-startQuiz();
+/*
+function for event listener to check
+whether selected answer is true or false    
+*/
+function checkAnswer(c) {
+    const selectedButton = c.target;
+    const isCorrect = selectedButton.dataset.correct === "true";
 
-function checkAnswer() {
-
+    // style buttons for click event
+    if(isCorrect) {
+        selectedButton.classList.add("correct");
+    } else {
+        selectedButton.classList.add("incorrect");
+    }
 }
+
+startQuiz();
 
 function handleNextButton() {
 
