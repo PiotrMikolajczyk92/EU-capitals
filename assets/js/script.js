@@ -141,6 +141,7 @@ const questions = [
 let currentQuestionIndex = 0;
 const answerButtons = document.getElementById("answer-buttons");
 const questionElement = document.getElementById("question");
+const nextButton = document.getElementById("next-button");
 
 function startQuiz() {
     currentQuestionIndex = 0; // restarts question index to 0 when we start quiz 
@@ -201,7 +202,9 @@ function checkAnswer(c) {
         }
         // disable buttons when answer was selected
         button.disabled = "true";
-    })
+    });
+    // display next button when answer was selected
+    nextButton.style.display = "block";
 }
 
 startQuiz();
