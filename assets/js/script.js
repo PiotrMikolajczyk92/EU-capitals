@@ -206,9 +206,23 @@ function checkAnswer(c) {
     // display next button when answer was selected
     nextButton.style.display = "block";
 }
+
+/*
+function for next button click event to display next question
+or to show score if last question was displayed
+*/
+function handleNextButton() {
+    currentQuestionIndex++;
+    if(currentQuestionIndex < questions.length) {
+        displayQuestion();
+    } else {
+        showScore();
+    }
+}
+
 // event listener for next button click
 nextButton.addEventListener("click", ()=>{
-    if(currentQuestionIndex < question.length) {
+    if(currentQuestionIndex < questions.length) {
         handleNextButton();
     // if the last question is displayed, next button will restart quiz
     } else {
@@ -217,10 +231,6 @@ nextButton.addEventListener("click", ()=>{
 });
 
 startQuiz();
-
-function handleNextButton() {
-
-}
 
 function showScore() {
 
