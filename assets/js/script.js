@@ -206,6 +206,15 @@ function checkAnswer(c) {
     // display next button when answer was selected
     nextButton.style.display = "block";
 }
+// event listener for next button click
+nextButton.addEventListener("click", ()=>{
+    if(currentQuestionIndex < question.length) {
+        handleNextButton();
+    // if the last question is displayed, next button will restart quiz
+    } else {
+        startQuiz();
+    }
+});
 
 startQuiz();
 
