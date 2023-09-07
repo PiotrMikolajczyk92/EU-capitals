@@ -193,6 +193,15 @@ function checkAnswer(c) {
     } else {
         selectedButton.classList.add("incorrect");
     }
+
+    // check dataset for each button if it's true
+    Array.from(answerButtons.children).forEach(button => {
+        if(button.dataset.correct === "true") {
+            button.classList.add("correct");
+        }
+        // disable buttons when answer was selected
+        button.disabled = "true";
+    })
 }
 
 startQuiz();
