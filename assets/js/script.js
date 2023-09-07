@@ -142,8 +142,10 @@ let currentQuestionIndex = 0;
 const answerButtons = document.getElementById("answer-buttons");
 const questionElement = document.getElementById("question");
 const nextButton = document.getElementById("next-button");
+let score = 0;
 
 function startQuiz() {
+    score = 0; // reset score to 0 when we start quiz
     currentQuestionIndex = 0; // restarts question index to 0 when we start quiz 
     displayQuestion();
 }
@@ -191,6 +193,8 @@ function checkAnswer(c) {
     // style buttons for click event
     if(isCorrect) {
         selectedButton.classList.add("correct");
+        //increment the score if correct answer was selected
+        score++;
     } else {
         selectedButton.classList.add("incorrect");
     }
@@ -230,8 +234,11 @@ nextButton.addEventListener("click", ()=>{
     }
 });
 
-startQuiz();
-
+// displays feedback to the user after answering the last question
 function showScore() {
-
+    hidePreviousQuestion();
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}.`;
+    nextButton.innerHTML = "Play Again";
 }
+
+startQuiz();
