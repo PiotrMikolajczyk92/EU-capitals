@@ -1,3 +1,9 @@
+// wait for the DOM to finish loading before running the quiz
+
+document.addEventListener("DOMContentLoaded", function() {
+    startQuiz();
+});
+
 // create an array with list of questions and answers
 
 const questions = [
@@ -246,5 +252,3 @@ function showScore() {
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
 }
-
-startQuiz();
