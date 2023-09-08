@@ -146,7 +146,9 @@ let score = 0;
 
 function startQuiz() {
     score = 0; // reset score to 0 when we start quiz
-    currentQuestionIndex = 0; // restarts question index to 0 when we start quiz 
+    currentQuestionIndex = 0; // restarts question index to 0 when we start quiz
+    // set next button's inner HTML back to 'next' when restarting the quiz 
+    nextButton.innerHTML = "Next"; 
     displayQuestion();
 }
 
@@ -176,6 +178,8 @@ function displayQuestion() {
 }
 
 function hidePreviousQuestion() {
+    // hide next button before user selects next anwser
+    nextButton.style.display = "none";
     // hide previous question while displaying current question
     while(answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
@@ -238,7 +242,9 @@ nextButton.addEventListener("click", ()=>{
 function showScore() {
     hidePreviousQuestion();
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}.`;
+    // display next button with inner HTML updated accordingly
     nextButton.innerHTML = "Play Again";
+    nextButton.style.display = "block";
 }
 
 startQuiz();
