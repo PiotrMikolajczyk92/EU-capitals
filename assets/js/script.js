@@ -165,7 +165,7 @@ function displayQuestion() {
     let questionNr = currentQuestionIndex + 1;
 
     // display current question
-    questionElement.innerHTML = questionNr + ". " + currentQuestion.question;
+    questionElement.innerHTML = questionNr + "/15 " + currentQuestion.question;
 
     // display answers for current question using forEach array method
     currentQuestion.answers.forEach(answers => {
