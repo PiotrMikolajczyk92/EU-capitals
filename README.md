@@ -161,7 +161,14 @@
         <li>JavaScript
             <ul>
                 <li>
-                    No errors were found when passing through the official Jshint validator.
+                    No errors were found when passing through the official Jshint validator. Results:
+                    <ul>
+                        <li>There are 10 functions in this file.</li>
+                        <li>Function with the largest signature take 1 arguments, while the median is 0.</li>
+                        <li>Largest function has 8 statements in it, while the median is 4.</li>
+                        <li>The most complex function has a cyclomatic complexity value of 2 while the median is 2.</li>
+                        <li>There are 15 warnings detected.</li>
+                    </ul>
                 </li>
             </ul>
         </li>
