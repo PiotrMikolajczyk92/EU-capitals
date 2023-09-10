@@ -131,11 +131,11 @@
         <li>I confirmed that this website is responsive, looks good and functions on all standard screen sizes using the devtools device toolbar.</li>
         <li>I confirmed that the header, quiz area, footer and buttons are all readable and easy to understand.</li>
         <li>Website is responsive on all screen sizes and no images are pixelated or stretched. No horizontal scroll is present. No elements overlap. Steps to test:
-            <ol>
+            <ul>
             <li>Open browser and navigate to <a href="https://piotrmikolajczyk92.github.io/EU-capitals/" target="_blank">EU Capitals</a></li>
             <li>Open the developer tools (right click and inspect).</li>
             <li>Click and drag the responsive window to minimum and maximum width</li>
-            </ol></li>
+            </ul></li>
     </ul>
 <h1>Fixed Bugs</h1>
     <ul>
